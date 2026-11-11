@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Rona | Digital & Creative Agency</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ruangrona.css">
+  
+  <!-- FILE CSS TERPISAH -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <a href="#beranda" class="logo-container">
+      <img src="ruang_rona.png" alt="Logo Ruang Rona" class="brand-logo-img">
+      <span class="logo-text">Ruang Rona</span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang-kami">Tentang Kami</a></li>
+        <li><a href="#katalog">Katalog Makeup</a></li>
+        
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" onclick="toggleDropdown(event)">
+            Layanan <i class="fa-solid fa-chevron-down" style="margin-left: 4px; font-size: 0.75rem;"></i>
+          </a>
+          
+          <ul class="dropdown-menu" id="servicesDropdown">
+            <li><a href="#layanan" onclick="closeDropdown()">Layanan Utama</a></li>
+            <li><a href="#katalog" onclick="closeDropdown()">Katalog Makeup</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="btn-primary" onclick="openModal()">Hubungi Kami</button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="beranda">
+    <div>
+      <div class="badge">Digital & Creative Agency</div>
+      <div class="tagline-highlight">“Your Space, Your Rona”</div>
+      <h1>Menonjolkan Karakter Unik <span>Brand Anda.</span></h1>
+      <p>
+        Ruang Rona mendampingi mitra profesional seperti Asmi Makeup Makassar dalam mengoptimalkan katalog layanan, portofolio digital, dan strategi pemasaran.
+      </p>
+      <button class="btn-primary" onclick="openModal()">Hubungi Sekarang</button>
+    </div>
+
+    <div class="hero-stats-box">
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p><strong>Professional MUA</strong><br>Hasil riasan flawless, rapi, dan tahan lama</p>
+      </div>
+      <div class="stat-item">
+        <h3>Estetis</h3>
+        <p><strong>Portfolio Ready</strong><br>Katalog layanan makeup terkurasi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG KAMI SECTION -->
+  <section id="tentang-kami">
+    <div class="section-title-wrap">
+      <h2>Tentang Ruang Rona</h2>
+      <p>Mitra agensi kreatif untuk pengembangan bisnis dan portofolio profesional UMKM</p>
+    </div>
+
+    <div class="split-layout">
+      <div class="info-panel">
+        <div class="info-panel-header">
+          <div class="info-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+          <h3>Siapa Kami?</h3>
+        </div>
+        <p>
+          Ruang Rona adalah creative agency yang berkolaborasi langsung dengan pelaku usaha lokal di Makassar untuk memperkuat branding, menyusun katalog layanan, dan meningkatkan visibilitas digital.
+        </p>
+      </div>
+
+      <div class="info-panel">
+        <div class="info-panel-header">
+          <div class="info-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Filosofi Kami</h3>
+        </div>
+        <p class="tagline-highlight">“Your Space, Your Rona”</p>
+        <p>
+          Membantu menampilkan karakter dan pesona terbaik dari setiap layanan yang ditawarkan oleh mitra kami kepada para klien.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN SECTION -->
+  <section id="layanan">
+    <div class="section-title-wrap">
+      <h2>Fokus Pendampingan</h2>
+      <p>Optimalisasi media sosial dan katalog layanan Asmi Makeup Makassar</p>
+    </div>
+
+    <div class="split-layout">
+      <div class="info-panel">
+        <div class="info-panel-header">
+          <div class="info-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3>Branding & Katalog</h3>
+        </div>
+        <ul class="info-list">
+          <li><i class="fa-solid fa-check"></i> Penyusunan Kategori Makeup Terstruktur</li>
+          <li><i class="fa-solid fa-check"></i> Penyesuaian Harga & Paket Booking</li>
+        </ul>
+      </div>
+
+      <div class="info-panel">
+        <div class="info-panel-header">
+          <div class="info-icon"><i class="fa-solid fa-photo-film"></i></div>
+          <h3>Konten & Portofolio</h3>
+        </div>
+        <ul class="info-list">
+          <li><i class="fa-solid fa-check"></i> Dokumentasi Hasil Riasan Wisuda & Event</li>
+          <li><i class="fa-solid fa-check"></i> Pengelolaan Instagram & TikTok MUA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- KATALOG 9 PAKET MAKEUP (DENGAN KODE PENAMBAHAN GAMBAR) -->
+  <section id="katalog">
+    <div class="section-title-wrap">
+      <h2>Katalog Layanan Makeup</h2>
+      <p>Pilihan paket riasan profesional untuk berbagai momen spesial Anda</p>
+    </div>
+
+    <div class="catalog-grid">
+      
+      <!-- 1: Makeup Wisuda -->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <!-- 
+              PETUNJUK: Masukkan link atau direktori foto pada atribut src di bawah ini. 
+              Contoh: src="images/wisuda.jpg" atau src="https://link-gambar.com/foto.jpg"
+            -->
+            <img src="foto katalog/make up wisuda.jpeg" alt="Makeup Wisuda" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Wisuda</span>
+            </div>
+          </div>
+          <div class="card-category">Makeup Event</div>
+          <div class="card-header">
+            <h3>Makeup Wisuda</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 250.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Makeup Wisuda (Rp 250.000)')">Pesan</button>
+      </div>
+
+      <!-- 2: Makeup Lamaran -->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/Make Up Lamaran.jpeg" alt="Makeup Lamaran" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Lamaran</span>
+            </div>
+          </div>
+          <div class="card-category">Makeup Special</div>
+          <div class="card-header">
+            <h3>Makeup Lamaran (Engagement)</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 400.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Makeup Lamaran (Rp 400.000)')">Pesan</button>
+      </div>
+
+      <!-- 3: Makeup Akad Nikah -->
+      <div class="catalog-card featured">
+        <span class="card-badge">Favorit</span>
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/make up akad nikah.jpeg" alt="Makeup Akad Nikah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Akad</span>
+            </div>
+          </div>
+          <div class="card-category">Wedding</div>
+          <div class="card-header">
+            <h3>Makeup Akad Nikah</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 1.500.000</div>
+          </div>
+        </div>
+        <button class="btn-primary" style="width: 100%;" onclick="openModalWithPackage('Makeup Akad Nikah (Rp 1.500.000)')">Pesan</button>
+      </div>
+
+      <!-- 4: Makeup Resepsi -->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/Make up resepsi.jpeg" alt="Makeup Resepsi Pernikahan" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Resepsi</span>
+            </div>
+          </div>
+          <div class="card-category">Wedding</div>
+          <div class="card-header">
+            <h3>Makeup Resepsi Pernikahan</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 1.800.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Makeup Resepsi Pernikahan (Rp 1.800.000)')">Pesan</button>
+      </div>
+
+      <!-- 5: Makeup Party-->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/make up party.jpeg" alt="Makeup Party" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Party</span>
+            </div>
+          </div>
+          <div class="card-category">Makeup Event</div>
+          <div class="card-header">
+            <h3>Makeup Party</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 300.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Makeup Pesta (Rp 300.000)')">Pesan</button>
+      </div>
+
+      <!-- 6: Makeup Prewedding -->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/make up prewed.jpeg" alt="Makeup Prewedding" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Prewedding</span>
+            </div>
+          </div>
+          <div class="card-category">Special Session</div>
+          <div class="card-header">
+            <h3>Makeup Prewedding</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 750.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Makeup Prewedding (Rp 750.000)')">Pesan</button>
+      </div>
+
+      <!-- 7: Makeup Photoshoot -->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/make up photoshoot.jpeg" alt="Makeup Photoshoot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Photoshoot</span>
+            </div>
+          </div>
+          <div class="card-category">Professional</div>
+          <div class="card-header">
+            <h3>Makeup Photoshoot / Editorial</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 350.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Makeup Photoshoot (Rp 350.000)')">Pesan</button>
+      </div>
+
+      <!-- 8: Makeup Anak -->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/make up anak.jpeg" alt="Makeup Anak / Kartini" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Anak</span>
+            </div>
+          </div>
+          <div class="card-category">Kids & Cultural</div>
+          <div class="card-header">
+            <h3>Makeup Anak / Kartini</h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 200.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Makeup Anak (Rp 200.000)')">Pesan</button>
+      </div>
+
+      <!-- 9: Group Booking -->
+      <div class="catalog-card">
+        <div>
+          <div class="catalog-img-box">
+            <img src="foto katalog/make up group.jpeg" alt="Group Booking" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="catalog-img-placeholder" style="display:none;">
+              <i class="fa-solid fa-camera"></i>
+              <span>Tambahkan Foto Group</span>
+            </div>
+          </div>
+          <div class="card-category">Package Bundle</div>
+          <div class="card-header">
+            <h3>Group Booking </h3>
+          </div>
+          <div class="price-wrap">
+            <div class="price-amount">Rp 650.000</div>
+          </div>
+        </div>
+        <button class="btn-secondary" onclick="openModalWithPackage('Group Booking (Rp 650.000)')">Pesan</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontak">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo-container">
+          <img src="ruang_rona.png" alt="Logo Ruang Rona" class="footer-logo-img">
+          <h4 style="margin-bottom: 0;">Ruang Rona</h4>
+        </div>
+        <p>Digital & Creative Agency</p>
+        <p class="tagline-highlight" style="font-size: 0.95rem; margin-top: 0.5rem; color: var(--footer-text-muted);">“Your Space, Your Rona”</p>
+        <br>
+        <p>Jl. Pendidikan NO.7, Makassar</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang-kami">Tentang Kami</a></li>
+          <li><a href="#katalog">Katalog Makeup</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak Resmi</h4>
+        <ul class="contact-info-list">
+          <li>
+            <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/6282190618995" target="_blank" style="color: #D1B8C0; text-decoration: none;">+62 821-9061-8995</a>
+          </li>
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/asmi91_makeup_makassar" target="_blank" style="color: #D1B8C0; text-decoration: none;">@asmi91_makeup_makassar</a>
+          </li>
+        </ul>
+        <br>
+        <button class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="openModal()">Hubungi Kami</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ruang Rona Creative Agency x Asmi Makeup Makassar. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- POP-UP MODAL PEMESANAN -->
+  <div class="modal-overlay" id="consultationModal">
+    <div class="modal-box">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <h3>Formulir Pemesanan</h3>
+      <p>Isi data singkat berikut untuk terhubung langsung ke WhatsApp pemesanan.</p>
+      
+      <form onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" required placeholder="Nama Anda">
+        </div>
+        
+        <div class="form-group">
+          <label for="contact">Nomor WhatsApp</label>
+          <input type="text" id="contact" required placeholder="08xxxxxxxxxx">
+        </div>
+
+        <div class="form-group">
+          <label for="package">Layanan Pilihan</label>
+          <select id="package" required>
+            <option value="Booking Umum">-- Pilih Layanan --</option>
+            <option value="Makeup Wisuda">Makeup Wisuda (Rp 250.000)</option>
+            <option value="Makeup Lamaran">Makeup Lamaran (Rp 400.000)</option>
+            <option value="Makeup Akad Nikah">Makeup Akad Nikah (Rp 1.500.000)</option>
+            <option value="Makeup Resepsi">Makeup Resepsi (Rp 1.800.000)</option>
+            <option value="Makeup Pesta">Makeup Pesta (Rp 300.000)</option>
+            <option value="Makeup Prewedding">Makeup Prewedding (Rp 750.000)</option>
+            <option value="Makeup Photoshoot">Makeup Photoshoot (Rp 350.000)</option>
+            <option value="Makeup Anak">Makeup Anak (Rp 200.000)</option>
+            <option value="Group Booking">Group Booking (Rp 650.000)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Catatan / Tanggal Acara</label>
+          <textarea id="message" rows="2" required placeholder="Tanggal & lokasi acara..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary" style="width: 100%;">Kirim Pesanan</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('consultationModal').classList.add('active');
+    }
+
+    function openModalWithPackage(packageName) {
+      const selectElement = document.getElementById('package');
+      if (selectElement) {
+        selectElement.value = packageName;
+      }
+      openModal();
+    }
+
+    function closeModal() {
+      document.getElementById('consultationModal').classList.remove('active');
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('consultationModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const dropdownMenu = document.getElementById('servicesDropdown');
+      dropdownMenu.classList.toggle('show');
+    }
+
+    function closeDropdown() {
+      const dropdownMenu = document.getElementById('servicesDropdown');
+      if (dropdownMenu) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('click', function(event) {
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown && !dropdown.contains(event.target)) {
+        closeDropdown();
+      }
+    });
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const selectedPackage = document.getElementById('package').value;
+      const message = document.getElementById('message').value;
+
+      const targetPhoneNumber = "6282190618995"; 
+
+      const waText = `Halo, saya ingin memesan layanan makeup.%0A%0A` +
+                     `*Nama:* ${encodeURIComponent(name)}%0A` +
+                     `*No WA:* ${encodeURIComponent(contact)}%0A` +
+                     `*Layanan:* ${encodeURIComponent(selectedPackage)}%0A` +
+                     `*Catatan:* ${encodeURIComponent(message)}`;
+
+      const waUrl = `https://wa.me/${targetPhoneNumber}?text=${waText}`;
+
+      window.open(waUrl, '_blank');
+
+      closeModal();
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
